@@ -127,4 +127,6 @@ The `docs/` notes are written in Turkish.
 ## License
 
 [MIT](LICENSE). The application icon is from Open Iconic (MIT); see
-[assets/ICON-LICENSE.txt](assets/ICON-LICENSE.txt).
+[assets/ICON-LICENSE.txt](assets/ICON-LICENSE.txt). The GitHub mark in the About
+dialog is from Primer Octicons (MIT) and is only used to link to this project's
+GitHub pages; see [assets/GITHUB-ICON-LICENSE.txt](assets/GITHUB-ICON-LICENSE.txt).

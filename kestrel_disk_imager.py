@@ -20,7 +20,10 @@ import win32con
 import win32file
 import pywintypes
 
+from about_dialog import REPO_URL, AboutDialog, github_link
+
 APP = 'Kestrel Disk Imager'
+APP_VERSION = '1.0.0'  # keep in sync with version_info.txt
 APP_DIR = Path(sys.executable).resolve().parent if getattr(sys, 'frozen', False) else Path(__file__).resolve().parent
 ICON_PATH = Path(__file__).resolve().parent / 'assets' / 'kestrel.ico'
 LOG_PATH = APP_DIR / 'writer.log'
@@ -571,11 +574,16 @@ class Main(wx.Frame):
         self.start = wx.Button(panel, label='SD Karta Yaz ve Doğrula')
         row.Add(self.refresh, 0, wx.RIGHT, 10)
         row.Add(self.start, 0)
-        root.Add(row, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM, 20)
+        row.AddStretchSpacer()
+        row.Add(github_link(panel, 'GitHub', REPO_URL, self.FromDIP(16)), 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 16)
+        self.about = wx.Button(panel, label='Hakkında')
+        row.Add(self.about, 0)
+        root.Add(row, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 20)
         panel.SetSizer(root)
         self.browse.Bind(wx.EVT_BUTTON, self.choose_image)
         self.refresh.Bind(wx.EVT_BUTTON, self.rescan)
         self.start.Bind(wx.EVT_BUTTON, self.begin)
+        self.about.Bind(wx.EVT_BUTTON, self.show_about)
         self.disk_list.Bind(wx.EVT_LIST_ITEM_SELECTED, self.select_device)
         self.disk_list.Bind(wx.EVT_LIST_ITEM_DESELECTED, self.deselect_device)
         self.Bind(wx.EVT_CLOSE, self.on_close)
@@ -812,6 +820,10 @@ class Main(wx.Frame):
         self.refresh.Enable()
         self.browse.Enable()
         self.rescan()
+
+    def show_about(self, event):
+        with AboutDialog(self, APP, APP_VERSION, ICON_PATH) as dialog:
+            dialog.ShowModal()
 
     def on_close(self, event):
         if self.busy:

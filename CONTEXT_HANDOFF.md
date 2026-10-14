@@ -1,5 +1,13 @@
 # Kestrel Disk Imager — durum
 
+2026-10-14: GUI'ye Hakkında eklendi: `about_dialog.py` (AboutDialog, github_link,
+REPO_URL). Ana pencere alt satırı: GitHub bağlantısı (ikonlu) + Hakkında düğmesi.
+Diyalog: logo, ad, sürüm (`APP_VERSION`, version_info.txt ile eş tutulur), açıklama,
+4 GitHub bağlantısı (proje, sürümler, issues, geliştirici), © + MIT. İkon
+`assets/github-mark.svg` (Primer Octicons, MIT; lisans GITHUB-ICON-LICENSE.txt),
+spec datas'a eklendi. Yazma/doğrulama akışı değişmedi. 39 test + ekran dışı
+diyalog kontrolü geçti. Henüz commit/push ve EXE yeniden derleme yapılmadı.
+
 2026-10-14: Repo https://github.com/AydinFatoglu/kestrel-disk-imager (public).
 Commit kimliği yalnız bu repoda 86136084+AydinFatoglu@users.noreply.github.com.
 gh 2.102.0 kullanıcı klasöründe (%LOCALAPPDATA%\Programs\gh\bin, PATH'te değil),
