@@ -65,8 +65,15 @@ folder does not exist, the dialog opens in your user folder.
 
 ## Download
 
-Signed builds are published on the GitHub **Releases** page. You can check the
-signature in Explorer under *Properties > Digital Signatures*, or with PowerShell:
+Download the latest `KestrelDiskImager.exe` from the
+[Releases page](https://github.com/AydinFatoglu/kestrel-disk-imager/releases).
+
+Free code signing provided by [SignPath.io](https://about.signpath.io),
+certificate by [SignPath Foundation](https://signpath.org). Release builds are
+signed according to the [code signing policy](CODE_SIGNING_POLICY.md).
+
+You can check the signature in Explorer under *Properties > Digital Signatures*,
+or with PowerShell:
 
 ```powershell
 Get-AuthenticodeSignature .\KestrelDiskImager.exe

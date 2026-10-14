@@ -1,5 +1,17 @@
 # Kestrel Disk Imager — durum
 
+2026-10-14: Repo https://github.com/AydinFatoglu/kestrel-disk-imager (public).
+Commit kimliği yalnız bu repoda 86136084+AydinFatoglu@users.noreply.github.com.
+gh 2.102.0 kullanıcı klasöründe (%LOCALAPPDATA%\Programs\gh\bin, PATH'te değil),
+AydinFatoglu olarak oturum açık (repo+workflow). İlk CI build başarılı.
+Uyarı: actions v4/v5 Node 20 deprecation; ileride sürümler yükseltilmeli.
+2026-10-14: SignPath Foundation başvurusu gönderildi (HubSpot formu; bireysel,
+şirket adı boş, Reputation: yeni proje olduğu açıkça yazıldı). Yanıt bekleniyor.
+Onay gelince: secret SIGNPATH_API_TOKEN + variables (org id, project/policy slug)
+gh ile girilir, version_info.txt sürümü kontrol edilir, `v1.0.0` etiketi itilir.
+README Download bölümüne SignPath ibaresi ve Releases bağlantısı eklendi
+(formdaki Download URL = README#download şartı).
+
 2026-10-14: Açık kaynak (SignPath Foundation) hazırlığı. Ad "Kestrel Disk
 Imager": ana dosya `kestrel_disk_imager.py`, spec `KestrelDiskImager.spec`,
 EXE `KestrelDiskImager.exe`, ikon `assets/kestrel.ico`. Kodda yalnız marka
