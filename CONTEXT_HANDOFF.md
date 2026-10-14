@@ -1,5 +1,9 @@
 # Kestrel Disk Imager — durum
 
+2026-10-14: Kullanıcı kararı: GitHub'da imzasız EXE bulunmayacak; ilk dışarı çıkan
+EXE imzalı olacak. CI her push'ta test+build yapar ama artifact yüklemez; upload
+yalnız `v*` etiketinde (SignPath için). Eski 2 imzasız artifact silindi.
+
 2026-10-14: GUI'ye Hakkında eklendi: `about_dialog.py` (AboutDialog, github_link,
 REPO_URL). Ana pencere alt satırı: GitHub bağlantısı (ikonlu) + Hakkında düğmesi.
 Diyalog: logo, ad, sürüm (`APP_VERSION`, version_info.txt ile eş tutulur), açıklama,
